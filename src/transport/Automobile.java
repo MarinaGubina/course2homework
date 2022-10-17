@@ -82,6 +82,16 @@ public class Automobile extends Car implements Competing{
     }
 
     @Override
+    public boolean doService() {
+        return false;
+    }
+
+    @Override
+    public void repairCar() {
+
+    }
+
+    @Override
     public void startMovement() {
         System.out.println("Начать движение");
     }

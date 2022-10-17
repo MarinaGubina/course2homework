@@ -80,6 +80,16 @@ public class Bus extends Car implements Competing{
     }
 
     @Override
+    public boolean doService() {
+        return false;
+    }
+
+    @Override
+    public void repairCar() {
+
+    }
+
+    @Override
     public String toString() {
         return "Bus - "+ super.toString();
     }
