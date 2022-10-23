@@ -73,19 +73,21 @@ public class Main {
 
         car3.addDriver(alex);
         car3.addMechanic(mechanic2);
+        car3.addMechanic(mechanic2);
         car3.addSponsor(s1);
         car3.addSponsor(s2);
+        car3.addSponsor(s2);
 
-        printInfoCar(truck2);
+        //printInfoCar(truck2);
         printInfoCar(car3);
 
-        System.out.println("ДЗ - 2. Задание 1 \n");
+       /* System.out.println("ДЗ - 2. Задание 1 \n");*/
         ServiceStation serviceStation = new ServiceStation();
         serviceStation.addAuto(car3);
-        serviceStation.addTruck(truck2);
+        /*serviceStation.addTruck(truck2);
         serviceStation.addAuto(car1);
 
-        serviceStation.service();
+        serviceStation.service();*/
 
     }
 

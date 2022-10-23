@@ -1,7 +1,9 @@
 package transport;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public abstract class Car {
     private String brand;
@@ -9,9 +11,9 @@ public abstract class Car {
     private double engineVolume;
     private boolean summerTyres;
 
-    private final List<Sponsor> sponsors = new ArrayList<>();
-    private final List<Mechanic<?>> mechanics = new ArrayList<>();
-    private final List<Driver<?>> drivers = new ArrayList<>();
+    private final Set<Sponsor> sponsors = new HashSet<>();
+    private final Set<Mechanic<?>> mechanics = new HashSet<>();
+    private final Set<Driver<?>> drivers = new HashSet<>();
     public Car(String brand, String model, double engineVolume) {
         if(isNullOrEmpty(brand)){
             this.brand = "default";}
@@ -41,15 +43,16 @@ public abstract class Car {
         drivers.add(driver);
     }
 
-    public List<Sponsor> getSponsors() {
+    public Set<Sponsor> getSponsors() {
+
         return sponsors;
     }
 
-    public List<Mechanic<?>> getMechanics() {
+    public Set<Mechanic<?>> getMechanics() {
         return mechanics;
     }
 
-    public List<Driver<?>> getDrivers() {
+    public Set<Driver<?>> getDrivers() {
         return drivers;
     }
 
